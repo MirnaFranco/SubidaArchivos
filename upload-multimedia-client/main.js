@@ -44,7 +44,7 @@ $form.addEventListener("submit", (event) => {
 
   const formData = new FormData(event.target);
 
-  fetch("http://localhost:4000/products", { // Ruta correcta del servidor
+  fetch("http://localhost:3000/products", { // Ruta correcta del servidor
     method: "POST",
     body: formData,
   })

@@ -1,8 +1,8 @@
-const { v4: uuidv4 } = require('uuid');
+import { v4 as uuidv4 } from 'uuid';
 
 let products = [];
 
-exports.createProduct = (req, res) => {
+export function createProduct(req, res) {
   const { name, description, price } = req.body;
   const imageUrl = `/uploads/${req.file.filename}`;
   
@@ -17,4 +17,4 @@ exports.createProduct = (req, res) => {
   products.push(newProduct);
   
   res.status(201).json(newProduct);
-};
+}
